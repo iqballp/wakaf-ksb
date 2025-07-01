@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<title>Data Tanah Wakaf</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css"/>
+<style>
+        body {
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        thead input, thead select {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    
+    select.form-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: none;
+        padding-right: 0.5rem;
+    }
+    
+    select.form-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: none;
+        padding-right: 0.5rem;
+        border: 1px solid #ccc;
+        box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1), 1px 1px 3px rgba(0,0,0,0.2);
+        border-radius: 4px;
+        background-color: #ffffff;
+    }
+    
+    .dt-buttons .btn {
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        border: 1px solid #ccc;
+        background-color: #f8f9fa;
+        border-radius: 6px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .dt-buttons .btn:hover {
+        background-color: #e2e6ea;
+        transform: translateY(-1px);
+        box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    }
+    
+    thead th {
+        background-color: #d0e7ff !important;
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark mb-4 shadow">
+<div class="container-fluid">
+<span class="navbar-brand mb-0 h1">Data Tanah Wakaf</span>
+</div>
+</nav>
+<div class="container-fluid">
+<div class="table-responsive">
+<table class="table table-bordered table-striped table-hover" id="wakafTable">
+<thead>
+<tr>
+<th>NO</th><th>NO. HAK WAKAF</th><th>DES./KEL.</th><th>KEC.</th><th>No.     SURAT UKUR</th><th>N.I.B</th><th>Luas M2.</th><th>NAZIR</th><th>WAKIF</th><th>PENGGUNAAN</th><th>KET</th>
+</tr>
+<tr>
+<th></th><th></th><th><select class="form-select form-select-sm"><option value="">Semua</option></select></th><th><select class="form-select form-select-sm"><option value="">Semua</option></select></th><th></th><th></th><th></th><th></th><th></th><th><select class="form-select form-select-sm"><option value="">Semua</option></select></th><th></th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>1</td><td>KEMUNING</td><td>SEKONGKANG</td><td>00012/2015</td><td>12</td><td>585</td><td>H. ABDUL RASID</td><td>ABDUL HAMIM</td><td>MASJID BAABUSSALAM</td><td></td></tr><tr><td>2</td><td>2</td><td>KEMUNING</td><td>SEKONGKANG</td><td>00013/2015</td><td>13</td><td>666</td><td>ANDONG NYOMPA</td><td>HJ. HASIPA UMAR UDIN M</td><td>MUSHALLA BAITU IMAN</td><td></td></tr><tr><td>3</td><td>3</td><td>KEMUNING</td><td>SEKONGKANG</td><td>00131/2018</td><td>131</td><td>225</td><td>H.ABD.KAFI</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>4</td><td>1</td><td>TONGO</td><td>SEKONGKANG</td><td>00514/2018</td><td>1096</td><td>7733</td><td>UMAR FITRAH, S.Ag</td><td>H.M. FITRAH</td><td>YAYASAN MANBAUL ULUM</td><td></td></tr><tr><td>5</td><td>2</td><td>TONGO</td><td>SEKONGKANG</td><td>00515/2018</td><td>1095</td><td>4379</td><td>H. RAHMAD</td><td>H.M. FITRAH</td><td>YAYASAN AL-FURQON</td><td></td></tr><tr><td>6</td><td>3</td><td>TONGO</td><td>SEKONGKANG</td><td>00400/2018</td><td>1094</td><td>31250</td><td>H. RAHMAD</td><td>H.M. FITRAH</td><td>YAYASAN AL-FURQON</td><td></td></tr><tr><td>7</td><td>4</td><td>TONGO</td><td>SEKONGKANG</td><td>00512/2018</td><td>383</td><td>345</td><td>NURMAN HAKIM</td><td>HASANUDDIN S</td><td>MUSHALLA AL-MUHAJIRIN</td><td></td></tr><tr><td>8</td><td>5</td><td>TONGO</td><td>SEKONGKANG</td><td>00512/2018</td><td>383</td><td>347</td><td>H. RIDWAN</td><td>H. ZAINUDDIN</td><td>MASJID NURUL IMAN</td><td></td></tr><tr><td>9</td><td>1</td><td>SEKONGKANG BAWAH</td><td>SEKONGKANG</td><td>00152/2015</td><td>353</td><td>942</td><td>H. M. NURDIN</td><td>MARIAM</td><td>MASJID AL-IKHLAS</td><td></td></tr><tr><td>10</td><td>2</td><td>SEKONGKANG BAWAH</td><td>SEKONGKANG</td><td>00153/2015</td><td>354</td><td>585</td><td>ABDUL MURAD</td><td>AHMAD BUDE</td><td>MUSHALLA AL-MUHAJIRIN</td><td></td></tr><tr><td>11</td><td>3</td><td>SEKONGKANG BAWAH</td><td>SEKONGKANG</td><td>00559/2018</td><td>760</td><td>769</td><td>H.SANAPIAH</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>12</td><td>1</td><td>SEKONGKANG ATAS</td><td>SEKONGKANG</td><td>00034/2015</td><td>871</td><td>609</td><td>MUSLIMIN</td><td>SAKUPIL</td><td>MUSHll RAUDATUL JANNAH</td><td></td></tr><tr><td>13</td><td>2</td><td>SEKONGKANG ATAS</td><td>SEKONGKANG</td><td>00035/2015</td><td>872</td><td>831</td><td>M. YUSUF</td><td>HASAN </td><td>MUSHALLA AL-MUKMININ</td><td></td></tr><tr><td>14</td><td>3</td><td>SEKONGKANG ATAS</td><td>SEKONGKANG</td><td>00036/2015</td><td>873</td><td>529</td><td>H. MASLUKANO</td><td>M. RASYIDIN</td><td>MASJID BAITUL GHAPPUR</td><td></td></tr><tr><td>15</td><td>4</td><td>SEKONGKANG ATAS</td><td>SEKONGKANG</td><td>00140/2018</td><td>1175</td><td>347</td><td>IWAN SHOHRI</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>16</td><td>1</td><td>BELO</td><td>JEREWEH</td><td>01061/2018</td><td>1179</td><td>446</td><td>TARMIZI</td><td>ASSHARUDDIN MUKHTAR</td><td>MUSHALLA</td><td></td></tr><tr><td>17</td><td>2</td><td>BELO</td><td>JEREWEH</td><td>01070/2018</td><td>1180</td><td>638</td><td>RUSMAN</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>18</td><td>1</td><td>BERU</td><td>JEREWEH</td><td>00834/2016</td><td>1434</td><td>343</td><td>RESTU HAKI M</td><td>MUHAMMAD NASIR, ST</td><td>MUSHALLA</td><td></td></tr><tr><td>19</td><td>2</td><td>BERU</td><td>JEREWEH</td><td>02254/2023</td><td>3801</td><td>675</td><td>SADIKIN</td><td>NURDIN</td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>20</td><td>1</td><td>GOA</td><td>JEREWEH</td><td>00093/2006</td><td>194</td><td>2285</td><td>MAHYUDDIN</td><td>MAHYUDDIN</td><td></td><td>Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>21</td><td>2</td><td>GOA</td><td>JEREWEH</td><td>00432/1994</td><td>666</td><td>1735</td><td>MUHAMMAD SALEH B</td><td>IMRAN ZAIN</td><td>MASJID</td><td></td></tr><tr><td>22</td><td>2</td><td>BENETE</td><td>MALUK</td><td>00014/2008</td><td>16</td><td>1080</td><td>H. ISMAIL</td><td>ABDUL MAJID R</td><td>MASJID</td><td></td></tr><tr><td>23</td><td>3</td><td>BENETE</td><td>MALUK</td><td>00774/2019</td><td>117</td><td>717</td><td>M. DAUD</td><td>MAX DARMAWAN</td><td>MASJID</td><td></td></tr><tr><td>24</td><td>4</td><td>BENETE</td><td>MALUK</td><td>01290/2024</td><td>2734</td><td>363</td><td>SYAMSUL HIDAYAT</td><td>MAX DARMAWAN</td><td>MASJID AL-HIJRAH</td><td></td></tr><tr><td>25</td><td>1</td><td>PASIR PUTIH</td><td>MALUK</td><td>00934/2020</td><td>1141</td><td>1735</td><td>AMAQ SUKUR</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>26</td><td>1</td><td>SENAYAN</td><td>POTO TANO</td><td>00318/2015</td><td>1269</td><td>314</td><td>H.RASID</td><td>SULAIMAN</td><td>MASJID AR-RAHMAN</td><td>SU Link dengan NIB 1269, tercatat pada fisik su NIB269</td></tr><tr><td>27</td><td>8</td><td>MANTAR</td><td>POTO TANO</td><td>00001/2015</td><td>3</td><td>330</td><td>SUMBA SUKANG</td><td>M. SALEH CEBUNG</td><td>MASJID</td><td></td></tr><tr><td>28</td><td>1</td><td>SENAYAN</td><td>POTO TANO</td><td>00163/2015</td><td>163</td><td>946</td><td>AHMAD AMIN</td><td>MUHAMMAD AJA</td><td>MASJID NURUL IMAN</td><td></td></tr><tr><td>29</td><td>2</td><td>SENAYAN</td><td>POTO TANO</td><td>00162/2015</td><td>162</td><td>559</td><td>H. ABDUL HARIS ZAMAN</td><td>H. MUHAMAD TAYUB SAPAR</td><td>MASJID AR-RAHMAN</td><td></td></tr><tr><td>30</td><td>3</td><td>SENAYAN</td><td>POTO TANO</td><td>00165/2018</td><td>417</td><td>848</td><td>H. GANI</td><td></td><td></td><td>Fisik BT Belum Ditemukan</td></tr><tr><td>31</td><td>1</td><td>MUJAHIDIN</td><td>BRANG ENE</td><td>00557/2023</td><td>490</td><td>1140</td><td>HAERUDDIN</td><td>H. JUNAIDI</td><td>MASJID AL-MUJAHIDIN</td><td></td></tr><tr><td>32</td><td>1</td><td>MURA</td><td>TALIWANG</td><td>00111/2002</td><td>111</td><td>360</td><td>MASADAH</td><td>MUSTAFA HASAN</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>33</td><td>2</td><td>MURA</td><td>TALIWANG</td><td>00110/2002</td><td>110</td><td>480</td><td>H. NURDIN</td><td>H. IBRAHIM</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>34</td><td>5</td><td>MURA</td><td>TALIWANG</td><td>00561/2017</td><td>628</td><td>219</td><td>HASANUDIN</td><td>SUHERMAN, A.Md</td><td>Musholla</td><td></td></tr><tr><td>35</td><td>1</td><td>SETELUK ATAS</td><td>SETELUK</td><td>01099/2018</td><td>1434</td><td>150</td><td>H.A.WAHAB</td><td>IRWAN SANDI HAMIM</td><td>Musholla</td><td></td></tr><tr><td>36</td><td>2</td><td>SETELUK ATAS</td><td>SETELUK</td><td>01104/2018</td><td>1435</td><td>1494</td><td>H. BASAR</td><td>NURLANA</td><td>MASJID UMMUL QURO</td><td></td></tr><tr><td>37</td><td>1</td><td>SETELUK TENGAH</td><td>SETELUK</td><td>00308/2015</td><td>926</td><td>279</td><td>SUKKAGAU</td><td>MASDAR ARMA, SE,M.Si</td><td>Musholla Al-Ikhlas</td><td></td></tr><tr><td>38</td><td>2</td><td>SETELUK TENGAH</td><td>SETELUK</td><td>00310/2015</td><td>928</td><td>120</td><td>MUSLIMIN</td><td>FATA CORA</td><td>Musholla</td><td></td></tr><tr><td>39</td><td>3</td><td>SETELUK TENGAH</td><td>SETELUK</td><td>00309/2015</td><td>927</td><td>195</td><td>A. RAHMAN</td><td>H. ILIK</td><td>Musholla Al-Raodah</td><td></td></tr><tr><td>40</td><td>1</td><td>LOKA</td><td>SETELUK</td><td>00146/20018</td><td>146</td><td>167</td><td>M. ALI WARDANA</td><td>DRS. H. MUCHSIN HAMIM</td><td>Musholla</td><td></td></tr><tr><td>41</td><td>1</td><td>AIR SUNING</td><td>SETELUK</td><td>00165/2016</td><td>1310</td><td>602</td><td>H. NAIMUDDIN</td><td>H. MUHAMMAD SALEH</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>42</td><td>1</td><td>KELANIR</td><td>SETELUK</td><td>00013/2017</td><td>552</td><td>520</td><td>H. MAHRAM</td><td>NURHASANAH</td><td>Musholla</td><td></td></tr><tr><td>43</td><td>2</td><td>KELANIR</td><td>SETELUK</td><td>00011/2018</td><td>550</td><td>403</td><td>H. MAHRAM</td><td>H. SUDIRMAN</td><td>masjid</td><td></td></tr><tr><td>44</td><td>1</td><td>TAPIR</td><td>SETELUK</td><td>00581/2015</td><td>1053</td><td>184</td><td>ZULKIFLI, S.PdI</td><td>H. ILIK</td><td>MASJID AR-RAHMAN</td><td></td></tr><tr><td>45</td><td>1</td><td>SAPUGARA BRE</td><td>BRANG REA</td><td>00003/2003</td><td>3</td><td>1900</td><td>H. ANDULLATIF</td><td>SARUJI BIN BOSANG</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>46</td><td>2</td><td>SAPUGARA BRE</td><td>BRANG REA</td><td>00002/2003</td><td>2</td><td>1430</td><td>HAJI MASRANG</td><td>HAJI TOYANG BIN MANDO</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>47</td><td>3</td><td>SAPUGARA BRE</td><td>BRANG REA</td><td>00001/2009</td><td>71</td><td>5928</td><td>AGUS KURNIAWAN</td><td>h. SYAMSUL ISMAIN</td><td>PNDOK PESANTREN HIMMATUL UMMAH</td><td></td></tr><tr><td>48</td><td>4</td><td>SAPUGARA BRE</td><td>BRANG REA</td><td>00002/2009</td><td>72</td><td>4836</td><td>AGUS KURNIAWAN</td><td>h. SYAMSUL ISMAIN</td><td>PNDOK PESANTREN HIMMATUL UMMAH</td><td></td></tr><tr><td>49</td><td>5</td><td>SAPUGARA BRE</td><td>BRANG REA</td><td>00342/2015</td><td>1549</td><td>472</td><td>H. BASRAN</td><td>H. NURDIN BAJING</td><td>MASJID NURUL HIKMAH</td><td></td></tr><tr><td>50</td><td>6</td><td>SAPUGARA BRE</td><td>BRANG REA</td><td>00343/2015</td><td>1548</td><td>705</td><td>H. BASRAN</td><td>IBRAHIM</td><td>MASJID AL-MUJAHIDIN</td><td></td></tr><tr><td>51</td><td>7</td><td>SAPUGARA BRE</td><td>BRANG REA</td><td>00344/2015</td><td>1547</td><td>381</td><td>ABDUL HAMZAH</td><td>MANSYUR HAQ</td><td>MASJID NURUL IMAN</td><td></td></tr><tr><td>52</td><td>8</td><td>SAPUGARA BRE</td><td>BRANG REA</td><td>00349/2015</td><td>1554</td><td>4710</td><td>H. SYAMSUL ISMAIN</td><td>MUCHTAR LUTTFIL, SH</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>53</td><td>1</td><td>TEPAS</td><td>BRANG REA</td><td>00146/2015</td><td>296</td><td>891</td><td>MUHAMAD BAGEP</td><td>H. HAERUDDIN SALEH</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>54</td><td>2</td><td>TEPAS</td><td>BRANG REA</td><td>00145/2015</td><td>295</td><td>947</td><td>H. MUHAMAD BASARY</td><td>ZAKARIYA</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>55</td><td>1</td><td>LAMUNTET</td><td>BRANG REA</td><td>00091/2015</td><td>92</td><td>504</td><td>KAMARUDDIN</td><td>KAMARUDDIN</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>56</td><td>1</td><td>BANGKET MONTE</td><td>BRANG REA</td><td>00003/2015</td><td>113</td><td>683</td><td>ARIYANTO</td><td>H. MUHAMMAD SALEH</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>57</td><td>9</td><td>BANGKET MONTE</td><td>BRANG REA</td><td>00002/2015</td><td>112</td><td>625</td><td>M. ALI WARDANA</td><td>M. MUSTARAN</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>58</td><td>1</td><td>MOTENG</td><td>BRANG REA</td><td>00001/2015</td><td>1</td><td>500</td><td>H. A. MUNIB</td><td>BURHANUDDIN</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>59</td><td>1</td><td>TEPAS SEPAKAT</td><td>BRANG REA</td><td>00101/2015</td><td>101</td><td>994</td><td>ISMAIL DIN</td><td>H. UMAR</td><td>MASJID AR-RAHMAN</td><td></td></tr><tr><td>60</td><td>2</td><td>TEPAS SEPAKAT</td><td>BRANG REA</td><td>00103/2015</td><td>103</td><td>449</td><td>MUSTARAM, A.Ma</td><td>MUSTAR</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>61</td><td>5</td><td>TEPAS SEPAKAT</td><td>BRANG REA</td><td>00104/2015</td><td>104</td><td>547</td><td>SAMPURNA, S.HUT</td><td>ABDUL KARIM</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>62</td><td>1</td><td>DESA BERU</td><td>BRANG REA</td><td>00092/2015</td><td>213</td><td>920</td><td>M. ALI. P</td><td>M. ALI P</td><td>MASJID</td><td></td></tr><tr><td>63</td><td>2</td><td>DESA BERU</td><td>BRANG REA</td><td>00093/2015</td><td>214</td><td>834</td><td>M. ALI. P</td><td>BADARIAH, S.Pd</td><td>MASJID ALHIDAYAH</td><td></td></tr><tr><td>64</td><td>3</td><td>DESA BERU</td><td>BRANG REA</td><td>00094/20015</td><td>215</td><td>238</td><td>ZAINUDDIN, S.Pd</td><td>FARDAN, SPD</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>65</td><td>4</td><td>DESA BERU</td><td>BRANG REA</td><td>00296/2016</td><td>417</td><td>283</td><td>PARMONO</td><td>H. PARMONO, S.Pd</td><td></td><td>Pada BT tidak ada dicatatkan penggunaan</td></tr><tr><td>66</td><td>1</td><td>DALAM</td><td>TALIWANG</td><td>00029/2002</td><td>29</td><td>134</td><td>HAJI ABDULLAH HAMID</td><td>TAUHID ANANG</td><td></td><td>Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>67</td><td>2</td><td>DALAM</td><td>TALIWANG</td><td>00945/2022</td><td>1414</td><td>706</td><td>ZAINUL ARIFIN, S.Sos</td><td>H. MAKASAU INO</td><td>MASJID ABDUL MAJID</td><td></td></tr><tr><td>68</td><td>1</td><td>ARAB KENANGAN</td><td>TALIWANG</td><td>00154/2015</td><td>152</td><td>357</td><td>MUHAMMAD ALWAN</td><td>H.SALEH ARDOLLAH</td><td></td><td>Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>69</td><td>2</td><td>ARAB KENANGAN</td><td>TALIWANG</td><td>00155/2015</td><td>320</td><td>320</td><td>SEGAP ALWI</td><td>ABDUL HALIK</td><td></td><td>Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>70</td><td>3</td><td>ARAB KENANGAN</td><td>TALIWANG</td><td>00156/2015</td><td>154</td><td>264</td><td>HASAN HINDUAN</td><td>USMAN HASAN HAIRID</td><td>MASJID AL-KHAIRIYAH</td><td></td></tr><tr><td>71</td><td>4</td><td>ARAB KENANGAN</td><td>TALIWANG</td><td>00369/2018</td><td>366</td><td>300</td><td>MUHAMMAD ALWAN</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>72</td><td>5</td><td>ARAB KENANGAN</td><td>TALIWANG</td><td>00463/2022</td><td>458</td><td>766</td><td>ABDUL MAJID BAFADAL</td><td>M.MUSTAR</td><td>MASJID ADDA'WAH</td><td></td></tr><tr><td>73</td><td>1</td><td>BUGIS</td><td>TALIWANG</td><td>00048/2004</td><td>1833</td><td>2899</td><td>MUHADLI</td><td></td><td></td><td>Wakif dan Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>74</td><td>2</td><td>BUGIS</td><td>TALIWANG</td><td>01073/2019</td><td>1989</td><td>409</td><td>SORA</td><td>ROHANI, S.Pd</td><td>MASJID</td><td></td></tr><tr><td>75</td><td>3</td><td>BUGIS</td><td>TALIWANG</td><td>01066/2019</td><td>1984</td><td>164</td><td>MOHAMMAD SAIPUDDIN, S.Sd.MM</td><td>MOHAMMAD SAIPUDDIN, S.Sd.MM</td><td>YAYASAN BABURRAHMAN</td><td></td></tr><tr><td>76</td><td>4</td><td>BUGIS</td><td>TALIWANG</td><td>01069/2019</td><td>1985</td><td>851</td><td>H.MANSYUR ASWIN</td><td>NURULLAH</td><td>MASJID NURULLAH</td><td></td></tr><tr><td>77</td><td>5</td><td>BUGIS</td><td>TALIWANG</td><td>01065/2019</td><td>1983</td><td>1929</td><td>H.ISMAIL S.AP</td><td>HUSEN BAFADAL</td><td>MASJID AL-IKHLAS</td><td></td></tr><tr><td>78</td><td>6</td><td>BUGIS</td><td>TALIWANG</td><td>01067/2019</td><td>1971</td><td>726</td><td>ABDUL AZIZ, S.Pd</td><td>ABDUL MUIN, S.Pd</td><td>MASJID AL-AZIZ</td><td></td></tr><tr><td>79</td><td>7</td><td>BUGIS</td><td>TALIWANG</td><td>01083/2019</td><td>1994</td><td>574</td><td>SURATMAN, ST</td><td>Dr.Ir.H.MUSYAFIRIN, MM</td><td>MASJID ASY-SYAKIRIN</td><td></td></tr><tr><td>80</td><td>8</td><td>BUGIS</td><td>TALIWANG</td><td>01055/2019</td><td>1980</td><td>252</td><td>M.SAID ISMAIL, S.Ag</td><td>REZA ALBAR</td><td>MASJID AL-MUJAHIRIN</td><td></td></tr><tr><td>81</td><td>9</td><td>BUGIS</td><td>TALIWANG</td><td>01070/2018</td><td>1986</td><td>827</td><td>AGUS DANUROSO</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>82</td><td>10</td><td>BUGIS</td><td>TALIWANG</td><td>02140/1997</td><td>2656</td><td>2105</td><td>SARUJI</td><td>ASIM BIN ATIP</td><td></td><td>Ganti Desa Ke Batu Putih HW. 00004</td></tr><tr><td>83</td><td>11</td><td>BUGIS</td><td>TALIWANG</td><td>01769/2023</td><td>2775</td><td>1041</td><td>M. SAID ISMAIL</td><td>H. MUSTAFA BAWAFIE</td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>84</td><td>1</td><td>TELAGA BERTONG</td><td>TALIWANG</td><td>00513/2015</td><td>878</td><td>14835</td><td>ZULKIFLI RAHMAN</td><td>H.HUSAIN AS</td><td>MASJID</td><td></td></tr><tr><td>85</td><td>2</td><td>TELAGA BERTONG</td><td>TALIWANG</td><td>03003/2020</td><td>4242</td><td>144</td><td>MANURUNG, S.Pd</td><td>RIYADI, SE</td><td>MASJID AS-SALAM</td><td></td></tr><tr><td>86</td><td>3</td><td>TELAGA BERTONG</td><td>TALIWANG</td><td>03021/2020</td><td>4262</td><td>302</td><td>MANURUNG, S.Pd</td><td>RIYADI, SE</td><td>MASJID AS-SALAM</td><td></td></tr><tr><td>87</td><td>4</td><td>TELAGA BERTONG</td><td>TALIWANG</td><td>02527/2019</td><td>3155</td><td>1049</td><td>AGUS BAJURI</td><td>NYARNO</td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>88</td><td>5</td><td>TELAGA BERTONG</td><td>TALIWANG</td><td>03932/2023</td><td>4827</td><td>668</td><td>MUSYABBIHIN</td><td>HENDRA GUNAWAN</td><td>MASJID AL-FITRAH</td><td></td></tr><tr><td>89</td><td>6</td><td>TELAGA BERTONG</td><td>TALIWANG</td><td>03933/2023</td><td>4826</td><td>602</td><td>SYAEFULLAH</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>90</td><td>1</td><td>KUANG</td><td>TALIWANG</td><td>00134/2003</td><td>122</td><td>747</td><td>ISKANDAR</td><td>HAJI MUHAMAD ZAIN MAJID</td><td></td><td>Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>91</td><td>1</td><td>BATU PUTIH</td><td>TALIWANG</td><td>00522/2018</td><td>846</td><td>767</td><td>ABDUL MUJIB</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>92</td><td>2</td><td>BATU PUTIH</td><td>TALIWANG</td><td>00523/2018</td><td>845</td><td>5778</td><td>IMRAN</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>93</td><td>3</td><td>BATU PUTIH</td><td>TALIWANG</td><td>00521/2018</td><td>847</td><td>325</td><td>SIRAJUDDIN</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>94</td><td>4</td><td>BATU PUTIH</td><td>TALIWANG</td><td>01519/2021</td><td>2395</td><td>2105</td><td>SAMSUDDIN, S.Sos</td><td>ASIM BIN ATIP</td><td></td><td>Wakif dan Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>95</td><td>5</td><td>BATU PUTIH</td><td>TALIWANG</td><td>01784/2023</td><td>2216</td><td>634</td><td>SAMSUDDIN, S.Sos</td><td></td><td></td><td>Wakif dan Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>96</td><td>1</td><td>MENALA</td><td>TALIWANG</td><td>00024/2003</td><td>21</td><td>15625</td><td>HAJI IBRAHIM SIHAB</td><td>HAJI AHMAD SAGIR</td><td></td><td>Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>97</td><td>2</td><td>MENALA</td><td>TALIWANG</td><td>00132/2009</td><td>332</td><td>1383</td><td>MUHAMAD AH</td><td>HAJI MUHAMMAD YANI</td><td>KEMASLAHATAN MASJID</td><td></td></tr><tr><td>98</td><td>1</td><td>SAMPIR</td><td>TALIWANG</td><td>00011/2002</td><td>11</td><td>421</td><td>HAJI ZULKIFLI MUHADLI</td><td>ZAKARIYA BEKARANG</td><td></td><td>Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>99</td><td>2</td><td>SAMPIR</td><td>TALIWANG</td><td>01474/2019</td><td>2331</td><td>718</td><td>HAIRIL WANSA ZAKARIAH</td><td></td><td></td><td>Fisik bt Blm ditemukan</td></tr><tr><td>100</td><td>1</td><td>BANJAR</td><td>TALIWANG</td><td>00544/2018</td><td>698</td><td>1038</td><td>MUSTARAM, A.Ma</td><td>LALU DARMAJI</td><td>MASJID NURUL IMAN</td><td></td></tr><tr><td>101</td><td>1</td><td>LAB. KERTASARI</td><td>TALIWANG</td><td>01190/2018</td><td>1279</td><td>838</td><td>SAHABUDDIN</td><td>H.MUHAMMAD NUR</td><td>MASJID NURUL HIDAYAH</td><td></td></tr><tr><td>102</td><td>2</td><td>LAB. KERTASARI</td><td>TALIWANG</td><td>01191/2018</td><td>1278</td><td>371</td><td>SUDIRMAN, S.Pd</td><td>HAJI ABDUL KARIM</td><td>MASJID NURUL IMAN</td><td></td></tr><tr><td>103</td><td>1</td><td>LAB. LALAR</td><td>TALIWANG</td><td>00001/1998</td><td>1</td><td>312</td><td>ABDUL MUIN</td><td>RAJAB BIN TAHIR</td><td></td><td>Wakif dan Penggunaan tidak tercatat pada buku tanah</td></tr><tr><td>104</td><td>2</td><td>LAB. LALAR</td><td>TALIWANG</td><td>00012/2003</td><td>10</td><td>650</td><td>BURHANUDDIN</td><td>HAJI MUHAMMAD TAYEB</td><td></td><td>Wakif dan Penggunaan tidak tercatat pada buku tanah</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script>
+        $(document).ready(function () {
+            var table = $('#wakafTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+            {
+                extend: 'excel',
+                text: 'Ekspor ke Excel',
+                className: 'btn btn-outline-secondary me-2'
+            },
+            {
+                extend: 'pdf',
+                text: 'Ekspor ke PDF',
+                className: 'btn btn-outline-secondary me-2'
+            },
+            {
+                extend: 'print',
+                text: 'Cetak',
+                className: 'btn btn-outline-secondary'
+            }
+        ],
+                initComplete: function () {
+                    this.api().columns().every(function (index) {
+                        var column = this;
+                        var colName = $(column.header()).text();
+                        if (['DES./KEL.', 'KEC.', 'PENGGUNAAN'].includes(colName)) {
+                            var select = $('thead tr:eq(1) th').eq(index).find('select');
+                            column.data().unique().sort().each(function (d, j) {
+                                if (d) select.append('<option value="' + d + '">' + d + '</option>');
+                            });
+                            select.on('change', function () {
+                                var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                                column.search(val ? '^' + val + '$' : '', true, false).draw();
+                            });
+                        }
+                    });
+                },
+                language: {
+                    search: "Cari:",
+                    lengthMenu: "Tampilkan _MENU_ entri",
+                    info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ entri",
+                    paginate: {
+                        previous: "Sebelumnya",
+                        next: "Berikutnya"
+                    },
+                    buttons: {
+                        excel: "Ekspor ke Excel",
+                        pdf: "Ekspor ke PDF",
+                        print: "Cetak"
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
